@@ -4,6 +4,7 @@ import ShaderBackground from './components/ShaderBackground'
 import BackgroundGradientAnimation from './components/BackgroundGradientAnimation'
 import GlowingEffectDemoSecond from './components/GlowingEffectDemoSecond'
 import { CanvasText } from './components/ui/canvas-text'
+import profilePhoto from './assets/ChatGPT Image 26 mars 2026, 18_37_37.png'
 
 type Project = {
   title: string
@@ -262,15 +263,17 @@ function App() {
               >
                 <div className="mx-auto flex max-w-[280px] flex-col items-center text-center">
                   <div className="relative h-48 w-48 overflow-hidden rounded-full border border-[var(--accent-border)] bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,0.22),rgba(255,255,255,0.02)_60%),linear-gradient(140deg,rgba(110,79,242,0.34),rgba(48,115,235,0.28))]">
-                    <div className="absolute inset-0 flex items-center justify-center text-4xl font-semibold tracking-wide text-white/90">
-                      FD
-                    </div>
+                    <img
+                      src={profilePhoto}
+                      alt="Photo de Famara Ibrahima Drame"
+                      className="h-full w-full object-cover object-top"
+                    />
                   </div>
                   <p className="mt-5 text-xs uppercase tracking-[0.24em] text-[var(--text)]">
-                    Avatar animé
+                    Profil
                   </p>
                   <p className="mt-2 text-sm text-[var(--text-h)]">
-                    Remplace par ta photo dans `src/assets/`.
+                    Famara Ibrahima Drame
                   </p>
                 </div>
               </motion.div>
@@ -483,8 +486,9 @@ export default App
 function ContactSection() {
   const reduceMotion = useReducedMotion()
   const linkedInHref = 'https://www.linkedin.com/'
-  const githubHref = 'https://github.com/'
-  const email = 'famara.drame@example.com'
+  const githubHref = 'https://github.com/faamzo'
+  const email = 'famzofid21@gmail.com'
+  const phone = '+221 761814172'
 
   return (
     <section
@@ -521,6 +525,17 @@ function ContactSection() {
                 {email}
               </a>
             </div>
+            <div className="rounded-xl border border-[var(--border)] bg-[color-mix(in_oklab,var(--bg),white_2%)] p-4">
+              <p className="text-xs uppercase tracking-[0.22em] text-[var(--text)]">
+                Téléphone
+              </p>
+              <a
+                className="mt-2 block font-medium text-[var(--text-h)] hover:underline"
+                href="tel:+221761814172"
+              >
+                {phone}
+              </a>
+            </div>
             <a
               className="block rounded-xl border border-[var(--border)] bg-[color-mix(in_oklab,var(--bg),white_2%)] p-4 transition hover:border-[var(--accent-border)] hover:bg-[var(--accent-bg)]"
               href={linkedInHref}
@@ -547,8 +562,7 @@ function ContactSection() {
             </a>
           </div>
           <p className="mt-6 text-xs text-[var(--text)]">
-            Remplace ces liens par tes vrais comptes (LinkedIn/GitHub) et ton
-            email.
+            Coordonnées mises à jour.
           </p>
         </motion.aside>
       </div>
